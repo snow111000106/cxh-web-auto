@@ -1,0 +1,47 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "验证微信登录",
+    "children" : [ {
+      "name" : "点击微信登录，弹出扫码登录弹窗",
+      "children" : [ {
+        "name" : "test_pwd_is_empty[data0]",
+        "uid" : "2c0fb59019658734",
+        "parentUid" : "f7d31ec2da04dcc652a2397af5cd2f15",
+        "status" : "passed",
+        "time" : {
+          "start" : 1678867472572,
+          "stop" : 1678867472572,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'case_name': 'test_msg_login_normal', 'input': {'username': 13100000001, 'pwd': 123456}, 'locator': 'test', 'expect': 'ces'}" ]
+      }, {
+        "name" : "test_pwd_is_empty[data1]",
+        "uid" : "bd32202938e0d3ea",
+        "parentUid" : "f7d31ec2da04dcc652a2397af5cd2f15",
+        "status" : "passed",
+        "time" : {
+          "start" : 1678867472575,
+          "stop" : 1678867472576,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'case_name': 'test_msg_login', 'input': {'username': 13100000002, 'pwd': 1234567999}, 'locator': 'test2', 'expect': 'ces2'}" ]
+      } ],
+      "uid" : "f7d31ec2da04dcc652a2397af5cd2f15"
+    } ],
+    "uid" : "061c64e306c5b822f1522ff567c42596"
+  } ]
+}

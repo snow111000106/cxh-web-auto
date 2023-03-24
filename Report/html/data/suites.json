@@ -1,0 +1,51 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "TestCase.login",
+    "children" : [ {
+      "name" : "test_wechat_login",
+      "children" : [ {
+        "name" : "TestWechatLogin",
+        "children" : [ {
+          "name" : "test_pwd_is_empty[data0]",
+          "uid" : "2c0fb59019658734",
+          "parentUid" : "b9c7e6208c0f7079929615205270fc09",
+          "status" : "passed",
+          "time" : {
+            "start" : 1678867472572,
+            "stop" : 1678867472572,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ "{'case_name': 'test_msg_login_normal', 'input': {'username': 13100000001, 'pwd': 123456}, 'locator': 'test', 'expect': 'ces'}" ]
+        }, {
+          "name" : "test_pwd_is_empty[data1]",
+          "uid" : "bd32202938e0d3ea",
+          "parentUid" : "b9c7e6208c0f7079929615205270fc09",
+          "status" : "passed",
+          "time" : {
+            "start" : 1678867472575,
+            "stop" : 1678867472576,
+            "duration" : 1
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ "{'case_name': 'test_msg_login', 'input': {'username': 13100000002, 'pwd': 1234567999}, 'locator': 'test2', 'expect': 'ces2'}" ]
+        } ],
+        "uid" : "b9c7e6208c0f7079929615205270fc09"
+      } ],
+      "uid" : "311e706653ab1a0745cf7aa09b8dfc9c"
+    } ],
+    "uid" : "cf7b410bf5350d2584893ccad7c90628"
+  } ]
+}

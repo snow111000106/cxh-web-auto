@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2023/03/15
+# @Author  : chenxuehong
+# @File    : test_login.yaml
+# @Remake  : 测试登录相关数据
+
+-
+  case_name: test_msg_login_normal
+  username: 13100000001
+  pwd: 123456
+  expect: ces
+
+-
+  case_name: test_msg_login
+  username: 13100000002
+  pwd: 1234567999
+  expect: ces2

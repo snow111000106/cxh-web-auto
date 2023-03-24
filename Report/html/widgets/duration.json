@@ -1,0 +1,21 @@
+[ {
+  "uid" : "2c0fb59019658734",
+  "name" : "test_pwd_is_empty[data0]",
+  "time" : {
+    "start" : 1678867472572,
+    "stop" : 1678867472572,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bd32202938e0d3ea",
+  "name" : "test_pwd_is_empty[data1]",
+  "time" : {
+    "start" : 1678867472575,
+    "stop" : 1678867472576,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

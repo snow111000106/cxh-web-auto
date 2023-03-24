@@ -1,0 +1,47 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "snow",
+    "children" : [ {
+      "name" : "97420-MainThread",
+      "children" : [ {
+        "name" : "test_pwd_is_empty[data1]",
+        "uid" : "bd32202938e0d3ea",
+        "parentUid" : "007ae16bf0563258654e4c3a9949b51e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1678867472575,
+          "stop" : 1678867472576,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'case_name': 'test_msg_login', 'input': {'username': 13100000002, 'pwd': 1234567999}, 'locator': 'test2', 'expect': 'ces2'}" ]
+      }, {
+        "name" : "test_pwd_is_empty[data0]",
+        "uid" : "2c0fb59019658734",
+        "parentUid" : "007ae16bf0563258654e4c3a9949b51e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1678867472572,
+          "stop" : 1678867472572,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'case_name': 'test_msg_login_normal', 'input': {'username': 13100000001, 'pwd': 123456}, 'locator': 'test', 'expect': 'ces'}" ]
+      } ],
+      "uid" : "007ae16bf0563258654e4c3a9949b51e"
+    } ],
+    "uid" : "4819eb7060f1b24b19bb6f4040efc733"
+  } ]
+}

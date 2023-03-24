@@ -1,0 +1,99 @@
+{
+  "uid" : "bd32202938e0d3ea",
+  "name" : "test_pwd_is_empty[data1]",
+  "fullName" : "TestCase.login.test_wechat_login.TestWechatLogin#test_pwd_is_empty",
+  "historyId" : "2f6bcda6a7b7b07163f4770817727195",
+  "time" : {
+    "start" : 1678867472575,
+    "stop" : 1678867472576,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "_xunit_setup_class_fixture_TestWechatLogin",
+    "time" : {
+      "start" : 1678867469061,
+      "stop" : 1678867472571,
+      "duration" : 3510
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_xunit_setup_class_fixture_TestWechatLogin::0",
+    "time" : {
+      "start" : 1678867472577,
+      "stop" : 1678867472701,
+      "duration" : 124
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "点击微信登录，弹出扫码登录弹窗"
+  }, {
+    "name" : "feature",
+    "value" : "验证微信登录"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.login"
+  }, {
+    "name" : "suite",
+    "value" : "test_wechat_login"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestWechatLogin"
+  }, {
+    "name" : "host",
+    "value" : "snow"
+  }, {
+    "name" : "thread",
+    "value" : "97420-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.login.test_wechat_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'case_name': 'test_msg_login', 'input': {'username': 13100000002, 'pwd': 1234567999}, 'locator': 'test2', 'expect': 'ces2'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bd32202938e0d3ea.json",
+  "parameterValues" : [ "{'case_name': 'test_msg_login', 'input': {'username': 13100000002, 'pwd': 1234567999}, 'locator': 'test2', 'expect': 'ces2'}" ]
+}
