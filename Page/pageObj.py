@@ -7,6 +7,7 @@ from WebBase.basepage import BasePage
 from Common.read_data import ReadYaml
 from Page.login_page import LoginPage
 from Page.home_page import HomePage
+from Page.cmm_login_page import CMMLoginPage
 from Page.authorLib_page import AuthorLibPage
 from selenium.webdriver.common.by import By
 
@@ -27,6 +28,17 @@ class PageObj(BasePage):
         try:
             self.openUrl(self.host + web['path']['login'])
             return LoginPage(self.driver)
+        except:
+            print('进入登录页失败')
+
+    def go_to_cmm_login(self):
+        """
+        跳转到登录页
+        :return:
+        """
+        try:
+            self.openUrl('https://sv-test.cds8.cn/login')
+            return CMMLoginPage(self.driver)
         except:
             print('进入登录页失败')
 

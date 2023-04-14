@@ -39,6 +39,10 @@ class BasePage(object):
         # 退出浏览器
         self.driver.close()
 
+    def quit(self):
+        # 退出浏览器
+        self.driver.quit()
+
     def refresh(self, times):
         # 刷新页面
         for i in range(times):
@@ -74,6 +78,36 @@ class BasePage(object):
         except:
             print('切换html失败')
 
+    def newTag(self, tab_name):
+        try:
+            self.driver.switch_to.new_window(tab_name)
+        except:
+            print('新建窗口失败')
+
+    def switchTag(self, handles):
+        try:
+            self.driver.switch_to.window(handles)
+        except:
+            print('切换窗口失败')
+
+    def getWindowsHandle(self):
+        try:
+            tag = self.driver.current_window_handle
+            return tag
+        except:
+            print('获取窗口标签失败')
+
+    def back(self):
+        try:
+            self.driver.back()
+        except:
+            print('回退失败')
+
+    def forward(self):
+        try:
+            self.driver.forward()
+        except:
+            print('前进失败')
 
 if __name__ == '__main__':
     pass

@@ -175,6 +175,11 @@ class LoginPage(BasePage):
             except:
                 print('短信登录/注册失败')
 
+    def new_cmm_windows(self):
+        self.newTag(tab_name='cmm')
+        self.openUrl('https://sv-test.cds8.cn/login')
+
+
     # # 获取登出按钮
     # def find_logout_button(self):
     #     menu = self.find(By.ID, 'e2e-login-avatar')
