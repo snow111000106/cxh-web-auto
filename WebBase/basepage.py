@@ -35,6 +35,10 @@ class BasePage(object):
         element = wait.until(lambda x: x.find_element(*locator))
         return element
 
+    def findElements(self, locator):
+        elements = self.driver.find_elements(*locator)
+        return elements
+
     def close(self):
         # 退出浏览器
         self.driver.close()
@@ -90,9 +94,13 @@ class BasePage(object):
         except:
             print('切换窗口失败')
 
-    def getWindowsHandle(self):
+    def getWindowsHandle(self, types='current'):
         try:
-            tag = self.driver.current_window_handle
+            tag = None
+            if types == 'all':
+                tag = self.driver.window_handles
+            if types == 'current':
+                tag = self.driver.current_window_handle
             return tag
         except:
             print('获取窗口标签失败')

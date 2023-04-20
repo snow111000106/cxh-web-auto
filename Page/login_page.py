@@ -6,6 +6,7 @@
 import time
 from WebBase.basepage import BasePage
 from selenium.webdriver.common.by import By
+from selenium.webdriver import ActionChains
 
 
 class LoginPage(BasePage):
@@ -29,10 +30,6 @@ class LoginPage(BasePage):
     el_login_button = (By.CSS_SELECTOR, 'button.el-button.login-btn')
     # 微信登录按钮
     wechat_button = (By.CSS_SELECTOR, 'i.cursor-pointer')
-    # 《服务协议》
-    service_agreementr = (By.CSS_SELECTOR, 'span.c333.cursor-pointer.ml5')
-    # 《隐私条款》
-    privacy_clause = (By.XPATH, '//*[@id="app"]/div/div/div[3]/div/div[2]/div/div/div[2]/span[4]')
     # 忘记密码
     forgot_pwd = (By.CSS_SELECTOR, 'div.cp.cursor-pointer.fs12')
     # 短信登录/注册入口
@@ -51,6 +48,10 @@ class LoginPage(BasePage):
     iframe = (By.XPATH, "//iframe[@src='https://captcha-service.chanmama.com?aid=CXH']")
     # 微信扫码登录弹窗
     wechat_code = (By.CLASS_NAME, 'code-logo')
+    # 使用其他账号登录按钮
+    other_login_btn = (By.CLASS_NAME, 'c333.fs1.ml5')
+    # 登出按钮
+    logout_button = (By.XPATH, "/html/body/div[3]/ul/li/ul/div[1]/div[3]")
 
     def __init__(self, driver):
         BasePage.__init__(self, driver)  # Base类的初始化
@@ -96,6 +97,10 @@ class LoginPage(BasePage):
                 self.findElement(self.wechat_button).click()
             if element_name == 'login_button':
                 self.findElement(self.login_button).click()
+            if element_name == 'other_login_btn':
+                self.findElement(self.other_login_btn).click()
+            if element_name == 'el_login_button':
+                self.findElement(self.el_login_button).click()
             if element_name == 'close_safety_cer':
                 self.switchIframe(self.findElement(self.iframe))
                 time.sleep(1)
@@ -142,6 +147,10 @@ class LoginPage(BasePage):
                 self.closeIframe()
             if ele_name == 'wechat_code':
                 result = self.isElemExist(self.wechat_code)
+            if ele_name == 'el_login_button':
+                result = self.isElemExist(self.el_login_button)
+            if ele_name == 'username_input':
+                result = self.isElemExist(self.username_input)
             return result
         except Exception as e:
             print(e)
@@ -177,19 +186,14 @@ class LoginPage(BasePage):
 
     def new_cmm_windows(self):
         self.newTag(tab_name='cmm')
-        self.openUrl('https://sv-test.cds8.cn/login')
 
+    def click_logout_button(self):
+        menu = self.findElement(self.user_picture)
+        time.sleep(2)
+        ActionChains(self.driver).move_to_element(menu).perform()
+        time.sleep(2)
+        self.findElement(self.logout_button).click()
 
-    # # 获取登出按钮
-    # def find_logout_button(self):
-    #     menu = self.find(By.ID, 'e2e-login-avatar')
-    #     time.sleep(3)
-    #     ActionChains(self.driver).move_to_element(menu).perform()
-    #     time.sleep(3)
-    #
-    #     return self.find(By.XPATH, "//*[contains(text(),'退出')]")
-    # def click_logout_btn(self):
-    #     self.find_logout_button().click()
 
 
 
