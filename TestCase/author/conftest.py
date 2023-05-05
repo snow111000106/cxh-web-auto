@@ -4,7 +4,7 @@
 # @File    : conftest.py
 
 import pytest
-import os
+import os,time
 import allure
 from Page.pageObj import PageObj
 # 导入独立的浏览器驱动对象
@@ -12,6 +12,28 @@ from WebBase.driver import init_driver
 
 
 browser_driver = None
+
+
+@pytest.fixture(scope='session')
+def browser():
+
+    global browser_driver
+    if browser_driver is None:
+        browser_driver = init_driver()
+    yield browser_driver
+    browser_driver.close()
+
+
+@pytest.fixture(scope='class')
+def go_to_login(browser):
+
+    PageObj(browser).go_to_login().login(username='13100000001', pwd='111111')
+    time.sleep(2)
+    authorLib_browser = PageObj(browser).go_to_authorLib()
+    authorLib_browser.init()
+    return authorLib_browser
+
+
 # 用例失败后自动截图
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item, call):
@@ -39,15 +61,6 @@ def pytest_runtest_makereport(item, call):
             with allure.step('添加失败截图...'):
                 allure.attach(browser_driver.get_screenshot_as_png(), "失败截图", allure.attachment_type.PNG)
 
-
-@pytest.fixture(scope='class')
-def browser():
-    global browser_driver
-    if browser_driver is None:
-        browser_driver = init_driver()
-        PageObj(browser_driver).go_to_login().login('13100000001', '111111')
-    yield browser_driver
-    browser_driver.close()
 
 
 

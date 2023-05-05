@@ -21,6 +21,5 @@ class HomePage(BasePage):
         self.refresh(times=2)
 
     def get_vip(self):
-        self.init()
         return self.findElement(self.vip_name).text
 

@@ -9,14 +9,16 @@ import allure
 
 class TestHome:
 
-    @allure.story("验证会员版本1")
-    def test_cxh_home(self, browser):
-        vip_name = PageObj(browser).go_to_home().get_vip()
-        assert vip_name == '企业版'
+    @allure.story("验证会员版本")
+    def test_cxh_vip(self, go_to_login):
+        self.bro = go_to_login
+        self.vip = self.bro.get_vip()
+        assert self.vip == '企业版'
 
     @allure.story("验证会员版本2")
-    def test_cxh_home_2(self, browser):
-        vip_name = PageObj(browser).go_to_home().get_vip()
-        assert vip_name == '专业版'
+    def test_cxh_home_2(self, go_to_login):
+        self.bro = go_to_login
+        self.vip = self.bro.get_vip()
+        assert self.vip == '专业版'
 
 

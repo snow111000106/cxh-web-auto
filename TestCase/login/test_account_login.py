@@ -47,7 +47,7 @@ class TestAccountLogin:
     def test_pwd_is_error(self):
 
         self.browser.input_text(string='13100000001', input_type='account')
-        self.browser.input_text(string='111111', input_type='password')
+        self.browser.input_text(string='000000', input_type='password')
         self.browser.click_element(element_name='login_button')
         msg = self.browser.get_error_msg()
         assert msg == '账号或密码错误'
@@ -56,7 +56,7 @@ class TestAccountLogin:
     def test_pwd_login_normal(self):
 
         self.browser.input_text(string='13100000001', input_type='account')
-        self.browser.input_text(string='123456', input_type='password')
+        self.browser.input_text(string='111111', input_type='password')
         status = self.browser.get_btn_status(btn_name='login_button')
         self.browser.click_element(element_name='login_button')
         result = self.browser.element_isExist(ele_name='user_picture')

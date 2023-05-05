@@ -18,6 +18,7 @@ class TestMessageLogin:
         self.browser_driver = init_driver()
         self.browser = PageObj(self.browser_driver).go_to_login()
         self.browser.switch_login_type(types='register')
+        time.sleep(2)
 
     def teardown_class(self):
         self.browser.close()

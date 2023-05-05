@@ -14,16 +14,12 @@ class CMMLoginPage(BasePage):
 
     # 手机号输入框
     mobile_input = (By.XPATH, "//input[@placeholder='请输入手机号'and@class='el-input__inner']")
-
     # 密码输入框
     pwd_input = (By.XPATH, "//input[@placeholder='请输入密码']")
-
     # 登录按钮
     login_button = (By.ID, "e2e-login-submit")
-
     # 登出按钮
     logout_button = (By.XPATH, "/html/body/div[3]/ul/li/ul/div[1]/div[3]")
-
     # 会员头像
     avatar = (By.CLASS_NAME, "el-submenu__title")
 

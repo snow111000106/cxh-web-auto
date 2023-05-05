@@ -2,6 +2,7 @@
 # @Time    : 2022/11/17
 # @Author  : chenxuehong
 # @File    : conftest.py
+import time
 
 import pytest
 import allure
@@ -13,7 +14,7 @@ from WebBase.driver import init_driver
 browser_driver = None
 
 
-@pytest.fixture(scope='class')
+@pytest.fixture(scope='session')
 def browser():
 
     global browser_driver
@@ -26,8 +27,11 @@ def browser():
 @pytest.fixture(scope='class')
 def go_to_login(browser):
 
-    login_browser = PageObj(browser).go_to_login()
-    return login_browser
+    PageObj(browser).go_to_login().login(username='13100000001', pwd='111111')
+    time.sleep(2)
+    home_browser = PageObj(browser).go_to_home()
+    home_browser.init()
+    return home_browser
 
 
 # 用例失败后自动截图

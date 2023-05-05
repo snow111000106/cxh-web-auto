@@ -52,6 +52,16 @@ class LoginPage(BasePage):
     other_login_btn = (By.CLASS_NAME, 'c333.fs1.ml5')
     # 登出按钮
     logout_button = (By.XPATH, "/html/body/div[3]/ul/li/ul/div[1]/div[3]")
+    # 安全认证背景
+    img_back = (By.CLASS_NAME, "img-back")
+    # 安全认证拼图
+    img_slide = (By.CLASS_NAME, "slide-img")
+    # 安全认证滑块
+    slide_block = (By.CLASS_NAME, "slide-block")
+    # 安全认证刷新
+    captcha_refresh = (By.CLASS_NAME, "captcha-refresh")
+    # 安全认证关闭
+    captcha_close = (By.CLASS_NAME, "close-icon-wrapper")
 
     def __init__(self, driver):
         BasePage.__init__(self, driver)  # Base类的初始化
@@ -129,7 +139,7 @@ class LoginPage(BasePage):
 
     def get_error_msg(self):
         try:
-            time.sleep(2)
+            time.sleep(3)
             msg = self.findElement(self.error_message).text
             return msg
         except:
@@ -172,6 +182,7 @@ class LoginPage(BasePage):
                 self.input_text(string=username, input_type='account')
                 self.input_text(string=pwd, input_type='password')
                 self.click_element(element_name='login_button')
+                time.sleep(1)
             except:
                 print('账号登录失败')
         if types == 'message' or types == 'register':
@@ -193,6 +204,13 @@ class LoginPage(BasePage):
         ActionChains(self.driver).move_to_element(menu).perform()
         time.sleep(2)
         self.findElement(self.logout_button).click()
+
+    def get_screenshot(self):
+        self.switchIframe(self.findElement(self.iframe))
+        time.sleep(1)
+        screenshot = self.findElement(self.img_back).get_attribute("src")
+        img_slide = self.findElement(self.img_slide).get_attribute("src")
+        return screenshot, img_slide
 
 
 
