@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2022/11/15
 # @Author  : chenxuehong
-# @File    : driver.py
+# @File    : basepage.py
 
 from Common.mylog import Mylog
 from Config.config import Config
@@ -12,11 +12,11 @@ import time
 class BasePage(object):
     # 初始化
     # 建议格式AaaBbbCcc
-    def __init__(self, deiver):
+    def __init__(self, driver):
         # 获取主页地址
         self.host = Config.get_url()
         # 创建浏览器对象
-        self.driver = deiver
+        self.driver = driver
         # 设置隐式等待
         self.driver.implicitly_wait(3)
         # 设置浏览器的最大化

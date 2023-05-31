@@ -7,7 +7,7 @@
 全局变量
 """
 # 环境test/stage/release
-environment = 'test'
+environment = 'stage'
 # 配置设备名称
 deviceName = 'Chrome'  # 输入浏览器Chrome/Firefox
 # 远程路径
