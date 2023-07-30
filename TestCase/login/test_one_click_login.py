@@ -19,12 +19,12 @@ class TestOneClickLogin:
         self.browser.new_cmm_windows()
         self.browser_cmm = PageObj(self.browser_driver).go_to_cmm_login()
         self.cmm_handle = self.browser.getWindowsHandle()
-        self.browser_cmm.login(mobile='13100000001', pwd='111111')
+        self.browser_cmm.login(mobile='14400000001', pwd='123456')
         self.browser_cmm.switchTag(self.cxh_handle)
         time.sleep(1)
 
     def teardown_class(self):
-        self.browser.quit()
+        self.browser.close()
 
     @allure.story("蝉妈妈登录账号，蝉小红自动获取蝉妈妈登录的账号")
     def test_get_cmm_account(self):

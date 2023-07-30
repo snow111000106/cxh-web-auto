@@ -22,7 +22,7 @@ class TestAccountLogin:
     @allure.story("未输入密码，登录按钮置灰")
     def test_pwd_is_empty(self):
 
-        self.browser.input_text(string='13100000001', input_type='account')
+        self.browser.input_text(string='14400000001', input_type='account')
         status = self.browser.get_btn_status(btn_name='login_button')
         self.browser.del_input()
         assert not status
@@ -46,7 +46,7 @@ class TestAccountLogin:
     @allure.story("输入错误的密码，登录失败有提示")
     def test_pwd_is_error(self):
 
-        self.browser.input_text(string='13100000001', input_type='account')
+        self.browser.input_text(string='14400000001', input_type='account')
         self.browser.input_text(string='000000', input_type='password')
         self.browser.click_element(element_name='login_button')
         msg = self.browser.get_error_msg()
@@ -55,8 +55,8 @@ class TestAccountLogin:
     @allure.story("输入正确的账号/密码，可正常登录")
     def test_pwd_login_normal(self):
 
-        self.browser.input_text(string='13100000001', input_type='account')
-        self.browser.input_text(string='111111', input_type='password')
+        self.browser.input_text(string='14400000001', input_type='account')
+        self.browser.input_text(string='123456', input_type='password')
         status = self.browser.get_btn_status(btn_name='login_button')
         self.browser.click_element(element_name='login_button')
         result = self.browser.element_isExist(ele_name='user_picture')

@@ -7,9 +7,9 @@
 全局变量
 """
 # 环境test/stage/release
-environment = 'stage'
+environment = 'test'
 # 配置设备名称
-deviceName = 'Chrome'  # 输入浏览器Chrome/Firefox
+deviceName = 'Chrome'  # 输入浏览器,Chrome/Firefox
 # 远程路径
 remote_path = 'http://127.0.0.1:4723'
 

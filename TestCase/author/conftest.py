@@ -27,7 +27,7 @@ def browser():
 @pytest.fixture(scope='class')
 def go_to_login(browser):
 
-    PageObj(browser).go_to_login().login(username='13100000001', pwd='111111')
+    PageObj(browser).go_to_login().login(username='14400000001', pwd='123456')
     time.sleep(2)
     authorLib_browser = PageObj(browser).go_to_authorLib()
     authorLib_browser.init()

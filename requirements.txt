@@ -5,6 +5,7 @@ selenium==4.6.0
 Appium-Python-Client==2.7.1
 Appium-UIAutomation==0.1.0
 PyMySQL==1.0.2
-allure-pytest==2.11.1
+allure-pytest==2.13.2
 allure-python-commons==2.11.1
-PyYAML==6.0
+Pyymal==6.0
+DingtalkChatbot==1.5.7

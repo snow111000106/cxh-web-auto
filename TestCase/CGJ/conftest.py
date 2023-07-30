@@ -2,14 +2,14 @@
 # @Time    : 2022/11/17
 # @Author  : chenxuehong
 # @File    : conftest.py
-import time
 
 import pytest
+import os,time
 import allure
-import os
 from Page.pageObj import PageObj
 # 导入独立的浏览器驱动对象
 from WebBase.driver import init_driver
+
 
 browser_driver = None
 
@@ -27,23 +27,19 @@ def browser():
 @pytest.fixture(scope='class')
 def go_to_login(browser):
 
-    PageObj(browser).go_to_login().login(username='14400000001', pwd='123456')
-    time.sleep(2)
-    home_browser = PageObj(browser).go_to_home()
-    home_browser.init()
-    return home_browser
+    PageObj(browser).go_to_cgj_home()
+    return browser
 
 
 # 用例失败后自动截图
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item, call):
-
-    """
+    '''
     获取每个用例状态的钩子函数
     :param item:
     :param call:
     :return:
-    """
+    '''
     # 获取钩子方法的调用结果
     outcome = yield
     rep = outcome.get_result()

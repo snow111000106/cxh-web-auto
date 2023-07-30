@@ -10,7 +10,7 @@ from Utils.dingTalkNotice import DingNotic
 
 if __name__ == "__main__":
 
-    args = ["./TestCase/login/test_other.py", "-s", "--alluredir=./Report/allure-results", "--clean-alluredir"]
+    args = ["./TestCase/CGJ", "-s", "--alluredir=./Report/allure-results", "--clean-alluredir"]
     pytest.main(args)
     # DingNotic.dingding_notice()
     os.system(r"allure generate --clean ./Report/allure-results/ -o ./Report/html")
