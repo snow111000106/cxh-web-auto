@@ -24,6 +24,10 @@ class CgjHomePage(BasePage):
     iknow_btn = (By.XPATH, '//*[@id="driver-popover-item"]/div[4]/button')
     # canvas画布
     canvas_class = (By.TAG_NAME, 'canvas')
+    # 关闭活动弹窗
+    close_pop_activity = (By.XPATH, '//*[@id="app"]/div[13]/div/div/div[2]/div/div[1]/div/div[2]/div/div')
+    # 关闭更新弹窗
+    close_pop_update = (By.XPATH, '//*[@id="app"]/div[13]/div/div/div[3]/div[1]/div/div[2]/div/div[1]/div/svg/path')
 
     def __init__(self, driver):
         BasePage.__init__(self, driver)  # Base类的初始化
@@ -35,9 +39,15 @@ class CgjHomePage(BasePage):
 
     def init(self):
         """初始化"""
-        self.refresh(2)
-        if self.isElemExist(self.iknow_btn):
-            self.findElement(self.iknow_btn).click()
+        try:
+            self.refresh(times=2)
+            if self.isElemExist(self.iknow_btn):
+                self.findElement(self.iknow_btn).click()
+            time.sleep(2)
+        except Exception as e:
+            print(e)
+
+        return self
 
     def login(self, mobile, code):
         """登陆"""

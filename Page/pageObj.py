@@ -11,7 +11,6 @@ from Page.cmm_login_page import CMMLoginPage
 from Page.cgj_home_page import CgjHomePage
 from Page.authorLib_page import AuthorLibPage
 from selenium.webdriver.common.by import By
-from bs4 import BeautifulSoup
 
 web = ReadYaml.read_yaml_data(file_path='./Config/web.yaml')
 
@@ -54,10 +53,6 @@ class PageObj(BasePage):
             return CgjHomePage(self.driver)
         except:
             print('进入蝉管家主页失败')
-
-    def get_html(self):
-        self.openUrl('https://changkong-test.cds8.cn')
-        return self
 
     def go_to_home(self):
         """

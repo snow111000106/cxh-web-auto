@@ -94,6 +94,9 @@ class BasePage(object):
         except:
             print('切换窗口失败')
 
+    def execute_script(self, script, *args):
+        return self.driver.execute_script(script, *args)
+
     def getWindowsHandle(self, types='current'):
         try:
             tag = None
