@@ -5,7 +5,8 @@
 
 import time
 from WebBase.basepage import BasePage
-from selenium.webdriver import ActionChains
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 
 
@@ -23,11 +24,17 @@ class CgjHomePage(BasePage):
     # 我知道了按钮
     iknow_btn = (By.XPATH, '//*[@id="driver-popover-item"]/div[4]/button')
     # canvas画布
-    canvas_class = (By.TAG_NAME, 'canvas')
+    canvas_class = (By.XPATH, '//canvas')
     # 关闭活动弹窗
     close_pop_activity = (By.XPATH, '//*[@id="app"]/div[13]/div/div/div[2]/div/div[1]/div/div[2]/div/div')
     # 关闭更新弹窗
     close_pop_update = (By.XPATH, '//*[@id="app"]/div[13]/div/div/div[3]/div[1]/div/div[2]/div/div[1]/div/svg/path')
+    # 折线图
+    line_chart_ele = (By.XPATH, "//*[@id='sidebarInnerContent']/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/"
+                                "div/div/div[2]")
+    # 上一级ele
+    up_ele = (By.XPATH, '//*[@id="sidebarInnerContent"]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/'
+                        'div/div/div[1]')
 
     def __init__(self, driver):
         BasePage.__init__(self, driver)  # Base类的初始化
@@ -59,9 +66,21 @@ class CgjHomePage(BasePage):
         except:
             print('账号登录失败')
 
-    def get_canvas_info(self):
-        canvas = self.findElement(self.canvas_class)
-        return canvas
+    def get_line_chart_info(self, pix):
+
+        webdriver.ActionChains(self).move_to_element(self.canvas_class).perform()
+        time.sleep(2)
+        div_ele = self.findElement(self.line_chart_ele)
+        time.sleep(1)
+        style_attribute = div_ele.get_attribute('style')
+        print(style_attribute)
+        left_value = int(style_attribute.split("left:")[1].split("px")[0].strip())
+        new_left_value = left_value + pix
+        self.execute_script("arguments[0].style.left = arguments[1] + 'px';", div_ele, new_left_value)
+        time.sleep(2)
+        next_level_element = div_ele.findElement(By.XPATH, "./div[1]")
+        next_level_content = next_level_element.text
+        return next_level_content
 
 
 
