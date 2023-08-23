@@ -29,9 +29,9 @@ def go_to_login(browser):
 
     PageObj(browser).go_to_login().login(username='14400000001', pwd='123456')
     time.sleep(2)
-    authorLib_browser = PageObj(browser).go_to_authorLib()
-    authorLib_browser.init()
-    return authorLib_browser
+    authorLib = PageObj(browser).go_to_authorLib()
+    authorLib.init()
+    return authorLib
 
 
 # 用例失败后自动截图

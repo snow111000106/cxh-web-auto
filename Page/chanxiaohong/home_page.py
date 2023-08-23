@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2022/11/16
 # @Author  : chenxuehong
-# @File    : authorLib_page.py
+# @File    : home_page.py
 
 from WebBase.basepage import BasePage
 from selenium.webdriver.common.by import By
 import time
 
 
-class AuthorLibPage(BasePage):
-    # 蝉小红博主库页面
+class CxhHomePage(BasePage):
+    # 蝉小红首页
 
     # 获取用户vip等级
     vip_name = (By.CSS_SELECTOR, "span.c333.ml5")

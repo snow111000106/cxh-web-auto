@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2023/07/29
 # @Author  : chenxuehong
-# @File    : cgj_login_page.py
+# @File    : cgj_big_home_page.py
 
 import time
 from WebBase.basepage import BasePage
@@ -10,8 +10,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 
 
-class CgjHomePage(BasePage):
-    # 蝉管家主页页面
+class CgjBigHomePage(BasePage):
+    # 蝉管家大首页页面
 
     # 登陆入口
     login_enter = (By.XPATH, '//*[@id="app"]/div[1]/header/div[2]/div/button[2]')

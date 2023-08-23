@@ -2,8 +2,8 @@
 # @Time    : 2022/11/17
 # @Author  : chenxuehong
 # @File    : conftest.py
-import time
 
+import time
 import pytest
 import allure
 import os

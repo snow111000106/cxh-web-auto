@@ -3,14 +3,14 @@
 # @Author  : chenxuehong
 # @File    : login_page.py
 
-import time
+import time, yaml
 from WebBase.basepage import BasePage
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 
 
-class LoginPage(BasePage):
-    # 登录页面
+class CxhLoginPage(BasePage):
+    # 蝉小红登陆页面
 
     # 手机号输入框
     username_input = (By.XPATH, "//input[@placeholder='请输入手机号'and@class='el-input__inner']")

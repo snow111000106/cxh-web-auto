@@ -9,7 +9,7 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 
 
-class CMMLoginPage(BasePage):
+class CmmLoginPage(BasePage):
     # 蝉妈妈登录页面
 
     # 手机号输入框

@@ -22,12 +22,13 @@ def init_driver():
 
         option.add_argument("--no-sandbox")  # 以最高权限运行
         option.add_experimental_option('excludeSwitches', ['enable-automation'])  # 屏蔽受控提示
-        option.add_argument("user-agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36(KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'")  # 设置user-agent
+        option.add_argument("user-agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+                            "(KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'")  # 设置user-agent
         # option.add_argument('--auto-open-devtools-for-tabs')  # 开启开发者模式
         # option.add_argument('--headless')  # 无界面模式
         # option.add_argument("--disable-javascript")  # 禁用java脚本
         if os_name == 'Windows':
-            driver = webdriver.Chrome(options=option, executable_path='D:/chromedriver/chromedriver.exe')
+            driver = webdriver.Chrome(options=option)
         elif os_name == 'Darwin':
             driver = webdriver.Chrome(options=option)
         else:

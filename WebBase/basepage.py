@@ -13,8 +13,12 @@ class BasePage(object):
     # 初始化
     # 建议格式AaaBbbCcc
     def __init__(self, driver):
-        # 获取主页地址
-        self.host = Config.get_url()
+        # 获取蝉小红主页地址
+        self.host = Config.get_url(types='cxh')
+        # 获取蝉妈妈主页地址
+        self.cmm_host = Config.get_url(types='cmm')
+        # 获取蝉管家主页地址
+        self.cgj_host = Config.get_url(types='cgj')
         # 创建浏览器对象
         self.driver = driver
         # 设置隐式等待
@@ -119,6 +123,7 @@ class BasePage(object):
             self.driver.forward()
         except:
             print('前进失败')
+
 
 if __name__ == '__main__':
     pass
