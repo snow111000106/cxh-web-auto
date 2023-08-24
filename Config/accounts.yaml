@@ -1,0 +1,71 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2023/08/24
+# @Author  : chenxuehong
+# @File    : accounts.yaml
+# @Remake  : 账号相关配置
+
+CXH:
+  DEFAULT:
+      "test": 14400000001
+      "stage": 10002240004
+      "release": 10002240004
+  COMMON:
+      "test": 14400000002
+      "stage": 15659809965
+      "release": 15659809965
+  PERSONAL:
+      "test": 14400000003
+      "stage": 10002240002
+      "release": 10002240002
+  MAJOR:
+      "test": 14400000004
+      "stage": 10002240003
+      "release": 10002240003
+  PASSWORD:
+      "test": 123456
+      "stage": 123456
+      "release": 123456
+
+CMM:
+  DEFAULT:
+      "test": 14400000001
+      "stage": 10002240004
+      "release": 10002240004
+  COMMON:
+      "test": 14400000002
+      "stage": 15659809965
+      "release": 15659809965
+  PERSONAL:
+      "test": 14400000003
+      "stage": 10002240002
+      "release": 10002240002
+  MAJOR:
+      "test": 14400000004
+      "stage": 10002240003
+      "release": 10002240003
+  PASSWORD:
+      "test": 123456
+      "stage": 123456
+      "release": 123456
+
+CGJ:
+  DEFAULT:
+      "test": 14400000001
+      "stage": 10002240004
+      "release": 10002240004
+  COMMON:
+      "test": 14400000002
+      "stage": 15659809965
+      "release": 15659809965
+  PERSONAL:
+      "test": 14400000003
+      "stage": 10002240002
+      "release": 10002240002
+  MAJOR:
+      "test": 14400000004
+      "stage": 10002240003
+      "release": 10002240003
+  PASSWORD:
+      "test": 123456
+      "stage": 123456
+      "release": 123456

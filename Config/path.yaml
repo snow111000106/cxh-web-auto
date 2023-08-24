@@ -1,0 +1,62 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2022/11/15
+# @Author  : chenxuehong
+# @File    : path.yaml
+# @Remake  : web相关配置
+
+
+# 蝉小红主页地址
+host:
+ test: https://cmm-xhs-test.cds8.cn
+ stage: https://cmm-xhs-stage.cds8.cn
+ release: https://www.chanxiaohong.com
+
+# 蝉妈妈主页地址
+cmm_host:
+ test: https://sv-test.cds8.cn
+ stage: https://sv-stage.cds8.cn
+ release: https://www.chanmama.com
+
+# 蝉管家主页地址
+cgj_host:
+ test: https://changkong-test.cds8.cn
+ stage: https://changkong-stage.cds8.cn
+ release: https://www.changuanjia.com
+
+# 蝉小红子页面路径
+cxh_path:
+ login: /login # 登录页面
+ dashboard: /dashboard  # 数据看板
+ authorLib: /authorLib  # 博主库
+ noteLib: /noteLib  # 笔记库
+ brandLib: /brandLib  # 品牌库
+ kindLib: /categoryLib  # 品类库
+ goodsLib: /goodsLib  # 商品库
+ liveLib: /liveLib  # 直播库
+ hotKeywordLib: /hotWordsLib  # 热搜词库
+ topicLib: /topicLib  # 话题库
+
+# 蝉妈妈子页面路径
+cmm_path:
+ login: /login  # 登录页面
+ home: /douyin  # 抖音主页
+ dashboard: /dashboard  # 抖音数据看板
+ authorLib: /bloggerRank  # 达人库
+ goodsLib: /promotionRank  # 商品库
+ liveLib: /liveSearch  # 直播库
+ awemeLib: /awemeRank  # 视频库
+ storeLib: /tikShopStore  # 小店库
+ brandLib: /brandSearch  # 品牌库
+
+
+# 蝉管家子页面路径
+cgj_path:
+ home: /home  # 蝉管家主页
+ anchorManage: /anchor-manage  # 主播管理
+ goodsOverview: /product-overview  # 商品概览
+ thousandAccount: /thousand-account  # 千川投放
+ userPortrait: /user-portrait  # 人群画像
+ videoManage: /video-manage  # 录屏管理
+
+
+

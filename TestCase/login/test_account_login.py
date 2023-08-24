@@ -6,6 +6,7 @@
 import time
 import allure
 from Page.pageObj import PageObj
+from Config.config import Config
 from WebBase.driver import init_driver
 
 
@@ -22,7 +23,7 @@ class TestAccountLogin:
     @allure.story("未输入密码，登录按钮置灰")
     def test_pwd_is_empty(self):
 
-        self.browser.input_text(string='14400000001', input_type='account')
+        self.browser.input_text(string=Config.get_account_info(account=1), input_type='account')
         status = self.browser.get_btn_status(btn_name='login_button')
         self.browser.del_input()
         assert not status
@@ -30,7 +31,7 @@ class TestAccountLogin:
     @allure.story("未输入账号，登录按钮置灰")
     def test_account_is_empty(self):
 
-        self.browser.input_text(string='123456', input_type='password')
+        self.browser.input_text(string=Config.get_account_info(pwd=1), input_type='password')
         status = self.browser.get_btn_status(btn_name='login_button')
         assert not status
 
@@ -38,7 +39,7 @@ class TestAccountLogin:
     def test_account_is_error(self):
 
         self.browser.input_text(string='11111', input_type='account')
-        self.browser.input_text(string='123456', input_type='password')
+        self.browser.input_text(Config.get_account_info(pwd=1), input_type='password')
         self.browser.click_element(element_name='login_button')
         msg = self.browser.get_error_msg()
         assert msg == '手机号码格式有误'
@@ -46,7 +47,7 @@ class TestAccountLogin:
     @allure.story("输入错误的密码，登录失败有提示")
     def test_pwd_is_error(self):
 
-        self.browser.input_text(string='14400000001', input_type='account')
+        self.browser.input_text(string=Config.get_account_info(account=1), input_type='account')
         self.browser.input_text(string='000000', input_type='password')
         self.browser.click_element(element_name='login_button')
         msg = self.browser.get_error_msg()
@@ -55,8 +56,8 @@ class TestAccountLogin:
     @allure.story("输入正确的账号/密码，可正常登录")
     def test_pwd_login_normal(self):
 
-        self.browser.input_text(string='14400000001', input_type='account')
-        self.browser.input_text(string='123456', input_type='password')
+        self.browser.input_text(string=Config.get_account_info(account=1), input_type='account')
+        self.browser.input_text(string=Config.get_account_info(pwd=1), input_type='password')
         status = self.browser.get_btn_status(btn_name='login_button')
         self.browser.click_element(element_name='login_button')
         result = self.browser.element_isExist(ele_name='user_picture')

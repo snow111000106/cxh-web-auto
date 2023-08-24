@@ -12,32 +12,8 @@ environment = 'test'
 deviceName = 'Chrome'  # 输入浏览器,Chrome/Firefox
 # 远程路径
 remote_path = 'http://127.0.0.1:4723'
-
-default_account = {
-    "test": 14400000001,
-    "stage": 10002240004,
-    "release": 10002240004
-}
-com_account = {
-    "test": 14400000002,
-    "stage": 15659809965,
-    "release": 15659809965
-}
-per_account = {
-    "test": 14400000003,
-    "stage": 10002240002,
-    "release": 10002240002
-}
-maj_account = {
-    "test": 14400000004,
-    "stage": 10002240003,
-    "release": 10002240003
-}
-password = {
-    "test": 123456,
-    "stage": 123456,
-    "release": 123456
-}
+# 默认code
+CODE = '888888'
 
 # 钉钉机器人配置
 webhook = \

@@ -49,7 +49,7 @@ class CxhLoginPage(BasePage):
     # 微信扫码登录弹窗
     wechat_code = (By.CLASS_NAME, 'code-logo')
     # 使用其他账号登录按钮
-    other_login_btn = (By.CLASS_NAME, 'c333.fs1.ml5')
+    other_login_btn = (By.XPATH, '//*[@id="app"]/div/div/div[3]/div/div[2]/div/div/div[4]/div[3]/span')
     # 登出按钮
     logout_button = (By.XPATH, "/html/body/div[3]/ul/li/ul/div[1]/div[3]")
     # 安全认证背景

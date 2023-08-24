@@ -22,17 +22,19 @@ class CmmLoginPage(BasePage):
     logout_button = (By.XPATH, "/html/body/div[3]/ul/li/ul/div[1]/div[3]")
     # 会员头像
     avatar = (By.CLASS_NAME, "el-submenu__title")
+    # 注册/登录入口
+    register_enter = (By.XPATH, '//*[@id="app"]/div[1]/div[1]/div[1]/div[3]/div[2]')
 
     def __init__(self, driver):
         BasePage.__init__(self, driver)  # Base类的初始化
 
-    # 获取登出按钮
     def click_logout_button(self):
         menu = self.findElements(self.avatar)
+        action = ActionChains(self.driver)
+        action.move_to_element(menu[1]).perform()
         time.sleep(2)
-        ActionChains(self.driver).move_to_element(menu[1]).perform()
-        time.sleep(1)
         self.findElement(self.logout_button).click()
+        time.sleep(1)
 
     def login(self, mobile, pwd):
         try:
@@ -42,6 +44,14 @@ class CmmLoginPage(BasePage):
         except:
             print('账号登录失败')
 
+    def wait_for_ele(self, ele_name, timeout):
+        """等待元素出现"""
+        try:
+            if ele_name == 'mobile_input':
+                self.findElement(self.mobile_input, timeout=timeout)
+            return True
+        except Exception as e:
+            print(e)
 
 
 

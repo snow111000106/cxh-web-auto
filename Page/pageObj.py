@@ -16,7 +16,7 @@ from Page.changuanjia.cgj_big_home_page import CgjBigHomePage
 from Page.changuanjia.cgj_home_page import CgjHomePage
 from selenium.webdriver.common.by import By
 
-web = ReadYaml.read_yaml_data(file_path='./Config/web_host.yaml')
+web = ReadYaml.read_yaml_data(file_path='./Config/path.yaml')
 
 
 class PageObj(BasePage):

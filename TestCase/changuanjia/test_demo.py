@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2023/03/07
 # @Author  : chenxuehong
-# @File    : test_one_click_login.py
+# @File    : test_demo.py
 
 import time
 
@@ -15,7 +15,6 @@ from WebBase.driver import init_driver
 
 
 @allure.feature('测试蝉管家')
-# @pytest.mark.skip('测试demo')
 class TestCGJhome:
 
     # def setup_class(self):

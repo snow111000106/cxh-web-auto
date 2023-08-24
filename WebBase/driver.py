@@ -21,6 +21,7 @@ def init_driver():
         option.add_argument('--blink-settings=imagesEnabled=true')  # 显示图片
 
         option.add_argument("--no-sandbox")  # 以最高权限运行
+        # option.add_argument("--webview-enable-modern-cookie-same-site")
         option.add_experimental_option('excludeSwitches', ['enable-automation'])  # 屏蔽受控提示
         option.add_argument("user-agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
                             "(KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'")  # 设置user-agent
@@ -46,4 +47,4 @@ def init_driver():
         return driver
     else:
         raise NameError(
-            "Not found %s browser,You can enter 'Chrome', 'Firefox'" % deviceName)
+            "Not found %s browser,You can enter 'Chrome', 'Firefox', 'Safari" % deviceName)
