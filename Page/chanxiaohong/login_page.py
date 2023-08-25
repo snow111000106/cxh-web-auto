@@ -51,7 +51,7 @@ class CxhLoginPage(BasePage):
     # 使用其他账号登录按钮
     other_login_btn = (By.XPATH, '//*[@id="app"]/div/div/div[3]/div/div[2]/div/div/div[4]/div[3]/span')
     # 登出按钮
-    logout_button = (By.XPATH, "/html/body/div[3]/ul/li/ul/div[1]/div[3]")
+    logout_button = (By.CSS_SELECTOR, ".c999.fs12.cursor-pointer")
     # 安全认证背景
     img_back = (By.CLASS_NAME, "img-back")
     # 安全认证拼图

@@ -54,10 +54,10 @@ class BasePage(object):
         """退出浏览器"""
         self.driver.quit()
 
-    def refresh(self, times):
+    def refresh(self, times, du=1):
         """刷新页面"""
         for i in range(times):
-            time.sleep(1)
+            time.sleep(du)
             self.driver.refresh()
 
     def clear_cookie(self):

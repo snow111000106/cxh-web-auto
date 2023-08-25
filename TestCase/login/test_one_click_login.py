@@ -67,7 +67,7 @@ class TestOneClickLogin:
     @allure.story("蝉妈妈退出登录后，蝉小红退出账号，蝉小红不会出现一键登录")
     def test_logout_cxh_account(self):
 
-        self.browser_cxh.refresh(times=1)
+        self.browser_cxh.refresh(times=3, du=2)
         self.browser_cxh.click_logout_button()
         self.browser_cxh.refresh(times=1)
         status = self.browser_cxh.element_isExist(ele_name='el_login_button')
