@@ -14,7 +14,7 @@ from Page.pageObj import PageObj
 from WebBase.driver import init_driver
 
 
-@allure.feature('测试蝉管家')
+@allure.feature('测试')
 class TestCGJhome:
 
     # def setup_class(self):
@@ -47,10 +47,10 @@ class TestCGJhome:
         # print("Canvas坐标：", coords)
 
         bro = self.browser_driver = init_driver()
-        bro.get('https://changkong-test.cds8.cn/home')
+        bro.get('xxxx')
         bro.maximize_window()
         bro.find_element(By.XPATH, "//input[@placeholder='请输入手机号'and@class='el-input__inner']").send_keys('14400000001')
-        bro.find_element(By.XPATH, "//input[@placeholder='请输入验证码']").send_keys('888888')
+        bro.find_element(By.XPATH, "//input[@placeholder='请输入验证码']").send_keys('xxxx')
         bro.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[1]/div[1]/div/div[2]/div[3]/button').click()
         time.sleep(3)
         bro.refresh()

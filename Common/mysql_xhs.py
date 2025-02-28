@@ -11,11 +11,11 @@ class CmmMysql:
     @staticmethod
     def db_xiaohongshu(sql):
 
-        db = pymysql.connect(host='cds-innet-server-proxy.ajin.me',
-                             port=33062,
-                             user='cmm-test',
-                             passwd='CDStest.2021',
-                             db='xiaohongshu')
+        db = pymysql.connect(host='xxxxx',
+                             port=xxxx,
+                             user='xxx',
+                             passwd='xxxx',
+                             db='xxxx')
         cur = db.cursor()
         try:
             cur.execute(sql)
@@ -31,11 +31,11 @@ class CmmMysql:
     @staticmethod
     def db_douyin(sql):
 
-        db = pymysql.connect(host='cds-innet-server-proxy.ajin.me',
-                             port=33062,
-                             user='cmm-test',
-                             passwd='CDStest.2021',
-                             db='douyin')
+        db = pymysql.connect(host='xxxx',
+                             port=xxx,
+                             user='xxxx',
+                             passwd='xxxx',
+                             db='xxxx')
         cur = db.cursor()
         try:
             cur.execute(sql)

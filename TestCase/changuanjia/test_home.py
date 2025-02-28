@@ -12,13 +12,13 @@ from WebBase.driver import init_driver
 from Page.pageObj import PageObj
 
 
-@allure.feature('蝉管家主页')
+@allure.feature('主页')
 class TestCGJhome:
 
     def setup_class(self):
         self.browser_driver = init_driver()
         self.browser_cgj = PageObj(self.browser_driver).go_to_cgj_home()
-        self.browser_cgj.login(mobile='14400000001', code='888888')
+        self.browser_cgj.login(mobile='14400000001', code='xxx')
         time.sleep(10)
         # self.browser_cgj.init()
 

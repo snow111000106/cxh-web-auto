@@ -9,7 +9,6 @@ from selenium.webdriver.common.by import By
 
 
 class CxhDashBoardPage(BasePage):
-    # 蝉小红数据看板页面
 
     # 手机号输入框
     mobile_input = (By.XPATH, "//input[@placeholder='请输入手机号'and@class='el-input__inner']")

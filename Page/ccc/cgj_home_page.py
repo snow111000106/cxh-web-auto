@@ -11,5 +11,4 @@ from selenium.webdriver.common.by import By
 
 
 class CgjHomePage(BasePage):
-    # 蝉管家主页面
     pass

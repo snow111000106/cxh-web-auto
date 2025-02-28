@@ -9,7 +9,6 @@ import time
 
 
 class CxhHomePage(BasePage):
-    # 蝉小红首页
 
     # 获取用户vip等级
     vip_name = (By.CSS_SELECTOR, "span.c333.ml5")

@@ -7,20 +7,20 @@
 CXH:
   DEFAULT:
       "test": 14400000001
-      "stage": 10002240004
-      "release": 10002240004
+      "stage": 14400000001
+      "release": 14400000001
   COMMON:
       "test": 14400000002
-      "stage": 15659809965
-      "release": 15659809965
+      "stage": 14400000002
+      "release": 14400000002
   PERSONAL:
       "test": 14400000003
-      "stage": 10002240002
-      "release": 10002240002
+      "stage": 14400000003
+      "release": 14400000003
   MAJOR:
       "test": 14400000004
-      "stage": 10002240003
-      "release": 10002240003
+      "stage": 14400000004
+      "release": 14400000004
   PASSWORD:
       "test": 123456
       "stage": 123456
@@ -29,20 +29,20 @@ CXH:
 CMM:
   DEFAULT:
       "test": 14400000001
-      "stage": 10002240004
-      "release": 10002240004
+      "stage": 14400000001
+      "release": 14400000001
   COMMON:
       "test": 14400000002
-      "stage": 15659809965
-      "release": 15659809965
+      "stage": 14400000002
+      "release": 14400000002
   PERSONAL:
       "test": 14400000003
-      "stage": 10002240002
-      "release": 10002240002
+      "stage": 14400000003
+      "release": 14400000003
   MAJOR:
       "test": 14400000004
-      "stage": 10002240003
-      "release": 10002240003
+      "stage": 14400000004
+      "release": 14400000004
   PASSWORD:
       "test": 123456
       "stage": 123456
@@ -51,20 +51,20 @@ CMM:
 CGJ:
   DEFAULT:
       "test": 14400000001
-      "stage": 10002240004
-      "release": 10002240004
+      "stage": 14400000001
+      "release": 14400000001
   COMMON:
       "test": 14400000002
-      "stage": 15659809965
-      "release": 15659809965
+      "stage": 14400000002
+      "release": 14400000002
   PERSONAL:
       "test": 14400000003
-      "stage": 10002240002
-      "release": 10002240002
+      "stage": 14400000003
+      "release": 14400000003
   MAJOR:
       "test": 14400000004
-      "stage": 10002240003
-      "release": 10002240003
+      "stage": 14400000004
+      "release": 14400000004
   PASSWORD:
       "test": 123456
       "stage": 123456

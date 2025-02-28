@@ -10,5 +10,4 @@ from selenium.webdriver.common.by import By
 
 
 class CmmBigHomePage(BasePage):
-    # 蝉妈妈大首页
     pass

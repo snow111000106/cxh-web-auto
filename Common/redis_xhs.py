@@ -11,7 +11,7 @@ class CmmRedis:
     @staticmethod
     def redis_xiaohongshu():
 
-        pool = redis.ConnectionPool(host='10.64.108.171', port=6379, db=1, password='CDStest.2018', decode_responses=True)
+        pool = redis.ConnectionPool(host='xxxx', port=xxx, db=1, password='xxxx', decode_responses=True)
         con = redis.Redis(connection_pool=pool)
         return con
 

@@ -11,7 +11,6 @@ from selenium.webdriver.common.by import By
 
 
 class CgjBigHomePage(BasePage):
-    # 蝉管家大首页页面
 
     # 登陆入口
     login_enter = (By.XPATH, '//*[@id="app"]/div[1]/header/div[2]/div/button[2]')

@@ -10,7 +10,6 @@ from selenium.webdriver import ActionChains
 
 
 class CxhLoginPage(BasePage):
-    # 蝉小红登陆页面
 
     # 手机号输入框
     username_input = (By.XPATH, "//input[@placeholder='请输入手机号'and@class='el-input__inner']")

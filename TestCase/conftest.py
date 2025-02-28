@@ -25,4 +25,4 @@ def pytest_terminal_summary(terminalreporter):
 
     send_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
     print(send_time, _TOTAL, _PASSED, _FAILED, _SKIPPED, _ERROR, times)
-    os.environ["REPORT"] = "蝉小红自动化运行情况：\n发送时间: {},\n用例总数: {},\n通过用例数: {},\n失败用例数: {},\n跳过用例数: {},\n错误用例数: {},\n总用时: {}".format(send_time, _TOTAL, _PASSED, _FAILED, _SKIPPED, _ERROR, times)
+    os.environ["REPORT"] = "自动化运行情况：\n发送时间: {},\n用例总数: {},\n通过用例数: {},\n失败用例数: {},\n跳过用例数: {},\n错误用例数: {},\n总用时: {}".format(send_time, _TOTAL, _PASSED, _FAILED, _SKIPPED, _ERROR, times)
